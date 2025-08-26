@@ -1,0 +1,18 @@
+# Build output
+dist/
+build/
+
+# Node modules
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# Vite cache
+.vite/
+
+# Tailwind JIT cache
+.tailwind/

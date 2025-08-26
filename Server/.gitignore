@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# Build artifacts (if using TypeScript or bundlers)
+dist/
+build/
