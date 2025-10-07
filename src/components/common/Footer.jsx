@@ -24,7 +24,7 @@ const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];
      <div className="bg-richblue-800">
          <div className="w-11/12 flex flex-col items-center gap-10">
              {/*Bigger box*/}
-             <div className="flex  mt-16 border-b mx-auto border-richblack-300 h-[70%]">
+             <div className="flex mt-16 border-b mx-auto border-richblack-300 h-[70%]">
                {/*Left one*/}
                <div className="flex gap-20 w-[44%] justify-between">
                   <div className="flex flex-col gap-3">
@@ -86,7 +86,7 @@ const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];
                </div>
 
                {/*Right  one*/}
-               <div className='flex gap-20 w-[44%] mx-10 justify-between'>
+               <div className='flex gap-20 w-[44%] mx-10 px-10 justify-between'>
                      {FooterLink2.map((ele,index)=>(
                       <div className='flex flex-col gap-3'>
                        <p key={index} className='text-richblack-5 font-semibold'>
@@ -109,7 +109,8 @@ const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];
                    <div></div>
                </div>
              </div>
-
+     
+              {/*Smaller box*/}
              <div className="flex justify-between items-center w-full px-10 py-4">
                {/* Left side */}
                <div className="flex gap-6">
