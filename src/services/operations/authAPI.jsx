@@ -9,7 +9,8 @@ const {
  SENDOTP_API,
  LOGIN_API,
  SIGNUP_API,
- RESETPASSTOKEN_API
+ RESETPASSTOKEN_API,
+ RESETPASSWORD_API
 }=endpoints
 
 export function sentOtp(email, navigate){
@@ -129,9 +130,34 @@ export function getPasswordResetToken(email,setEmailSent){
         setEmailSent(true);
     }
     catch(error){
-      console.log("RESET PASSWORD TOKEN ERROR")
+      console.log("RESET PASSWORD TOKEN ERROR");
+      toast.error("Failed to send email for resetting email");
     }
     dispatch(setLoading(false));
-    toast.error("Failed to send email for resetting email");
+    
    }
+}
+
+export function resetPassword(password,confirmPassword,token){
+  return async(dispatch)=>{
+    dispatch(setLoading(true));
+    try{
+       const response=await apiConnector("POST",RESETPASSWORD_API,{
+        password,
+        confirmPassword,
+        token
+       })
+       console.log("RESET PASSWORD RESPONSE......",response)
+
+       if(!response.data.success){
+           throw new Error(response.data.message)
+       }
+       console.log("Password has been reset successfully")
+    }
+    catch(error){
+      console.log("RESET PASSWORD ERROR");
+      toast.error("Failed to reset password");
+    }
+    dispatch(setLoading(false));
+  }
 }

@@ -20,7 +20,7 @@ const ForgotPassword = () => {
   return (
     <div className='w-[370px] text-center m-auto'>
         {loading ? (
-            <div className='spinner'>Loading.....</div>
+            <div className='spinner'></div>
         ) : (
             <div className='flex flex-col text-start p-15'>
                 <h1 className='text-richblack-5'>
