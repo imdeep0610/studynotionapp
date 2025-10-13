@@ -9,8 +9,12 @@ const {
  SENDOTP_API,
  LOGIN_API,
  SIGNUP_API,
+<<<<<<< HEAD
  RESETPASSTOKEN_API,
  RESETPASSWORD_API
+=======
+ RESETPASSTOKEN_API
+>>>>>>> bdbf826 (ProfileDropDown code)
 }=endpoints
 
 export function sentOtp(email, navigate){
@@ -108,7 +112,7 @@ export function logout(navigate){
   return(dispatch)=>{
     dispatch(setToken(null))
     dispatch(setUser(null))
-    dispatch(resetCart())
+    dispatch(resetCart)
     localStorage.removeItem("token")
     localStorage.removeItem("user")
     toast.success("Logged Out")
@@ -130,6 +134,7 @@ export function getPasswordResetToken(email,setEmailSent){
         setEmailSent(true);
     }
     catch(error){
+<<<<<<< HEAD
       console.log("RESET PASSWORD TOKEN ERROR");
       toast.error("Failed to send email for resetting email");
     }
@@ -160,4 +165,11 @@ export function resetPassword(password,confirmPassword,token){
     }
     dispatch(setLoading(false));
   }
+=======
+      console.log("RESET PASSWORD TOKEN ERROR")
+    }
+    dispatch(setLoading(false));
+    toast.error("Failed to send email for resetting email");
+   }
+>>>>>>> bdbf826 (ProfileDropDown code)
 }
