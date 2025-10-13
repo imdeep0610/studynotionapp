@@ -1,0 +1,27 @@
+[33m98edcb9[m[33m ([m[1;36mHEAD[m[33m)[m HEAD@{0}: commit: Recovered AboutPage files from Signup commit
+[33mdb64a0a[m HEAD@{1}: pull origin main --rebase (pick): Footer commit
+[33me9aa994[m HEAD@{2}: pull origin main --rebase (pick): Signup Login
+[33me717dd6[m[33m ([m[1;31morigin/main[m[33m)[m HEAD@{3}: pull origin main --rebase (start): checkout e717dd69f5fc0e94371a0a58d2ff967a61964f1e
+[33maf5dd97[m[33m ([m[1;32mmain[m[33m)[m HEAD@{4}: commit (merge): Signup and Login
+[33mcdb0e5d[m[33m ([m[1;32mrecovery-branch[m[33m)[m HEAD@{5}: reset: moving to HEAD
+[33mcdb0e5d[m[33m ([m[1;32mrecovery-branch[m[33m)[m HEAD@{6}: checkout: moving from recovery-branch to main
+[33mcdb0e5d[m[33m ([m[1;32mrecovery-branch[m[33m)[m HEAD@{7}: checkout: moving from main to recovery-branch
+[33mcdb0e5d[m[33m ([m[1;32mrecovery-branch[m[33m)[m HEAD@{8}: checkout: moving from 527ea10c131f95b19e7e00a01fc0a34f35b88517 to main
+[33m527ea10[m HEAD@{9}: checkout: moving from main to 527ea10c131f95b19e7e00a01fc0a34f35b88517
+[33mcdb0e5d[m[33m ([m[1;32mrecovery-branch[m[33m)[m HEAD@{10}: reset: moving to HEAD
+[33mcdb0e5d[m[33m ([m[1;32mrecovery-branch[m[33m)[m HEAD@{11}: checkout: moving from clean-main to main
+[33m79fe700[m[33m ([m[1;32mclean-main[m[33m)[m HEAD@{12}: commit: Signup
+[33ma83e254[m HEAD@{13}: rebase (abort): returning to refs/heads/clean-main
+[33mcdb0e5d[m[33m ([m[1;32mrecovery-branch[m[33m)[m HEAD@{14}: rebase (pick): Footer commit
+[33m9c6fb91[m HEAD@{15}: rebase (continue): Stusy Notion
+[33m527ea10[m HEAD@{16}: checkout: moving from main to main
+[33m527ea10[m HEAD@{17}: commit: Signup Login
+[33mf1b81e2[m HEAD@{18}: checkout: moving from fb87305a94048904843119af242848a16a07a724 to main
+[33mfb87305[m HEAD@{19}: commit: Signup Login
+[33me717dd6[m[33m ([m[1;31morigin/main[m[33m)[m HEAD@{20}: pull origin main --rebase (start): checkout e717dd69f5fc0e94371a0a58d2ff967a61964f1e
+[33ma83e254[m HEAD@{21}: commit: Login Signup
+[33mbdbf826[m HEAD@{22}: commit: ProfileDropDown code
+[33md9f2763[m HEAD@{23}: commit: Footer commit
+[33m0cdc85d[m HEAD@{24}: commit: Stusy Notion
+[33maec458b[m HEAD@{25}: commit (initial): Study Notion
+[33mf1b81e2[m HEAD@{26}: commit (initial): Initial commit with full project structure
