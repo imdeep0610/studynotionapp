@@ -1,0 +1,11 @@
+export default function AddCourse(){
+    return(
+        <>
+        <div>
+            <div>
+                <h1>Add Course</h1>
+            </div>
+        </div>
+        </>
+    )
+}
