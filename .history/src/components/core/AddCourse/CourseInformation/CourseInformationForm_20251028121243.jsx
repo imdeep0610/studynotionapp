@@ -124,7 +124,7 @@ const CourseInformationForm = () => {
             formData.append("status",COURSE_STATUS.DRAFT);
 
             setLoading(true);
-            const result=await addCourseDetails(formData,token);
+            const result=await addCourseDetails(formData);
             if(result){
               setStep(2);
               dispatch(setCourse(result))

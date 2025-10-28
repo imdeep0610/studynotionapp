@@ -103,13 +103,13 @@ const CourseInformationForm = () => {
                 setStep(2);
                 dispatch(setCourse(result));
                }
-                 console.log("PRINTING FORMDATA.......",formData);
-                 console.log("PRINTING RESULT......",result);
                }
                else{
               toast.error("No chnages made to the form");
             }
             return;
+            console.log("PRINTING FORMDATA.......",formData);
+            console.log("PRINTING RESULT......",result);
             }
             
             //create a new course
@@ -124,7 +124,7 @@ const CourseInformationForm = () => {
             formData.append("status",COURSE_STATUS.DRAFT);
 
             setLoading(true);
-            const result=await addCourseDetails(formData,token);
+            const result=await addCourseDetails(formData);
             if(result){
               setStep(2);
               dispatch(setCourse(result))

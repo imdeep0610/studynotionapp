@@ -9,7 +9,7 @@ import IconBtn from '../../../common/IconBtn';
 import toast from 'react-hot-toast';
 import {setStep,setCourse} from '../../../../slices/courseSlice';
 import {COURSE_STATUS} from '../../../../utils/constatnts';
-import {toast} from 'react-hot-toast';
+
 const CourseInformationForm = () => {
     const {
         register,
@@ -103,8 +103,6 @@ const CourseInformationForm = () => {
                 setStep(2);
                 dispatch(setCourse(result));
                }
-                 console.log("PRINTING FORMDATA.......",formData);
-                 console.log("PRINTING RESULT......",result);
                }
                else{
               toast.error("No chnages made to the form");
@@ -124,14 +122,12 @@ const CourseInformationForm = () => {
             formData.append("status",COURSE_STATUS.DRAFT);
 
             setLoading(true);
-            const result=await addCourseDetails(formData,token);
+            const result=await addCourseDetails(formData);
             if(result){
               setStep(2);
               dispatch(setCourse(result))
             }
             setLoading(false)
-            console.log("PRINTING FORMDATA.......",formData);
-            console.log("PRINTING RESULT......",result);
         }
 
   return (

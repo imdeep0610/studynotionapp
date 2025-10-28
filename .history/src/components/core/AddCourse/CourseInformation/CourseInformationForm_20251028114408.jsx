@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux';
-import {addCourseDetails, editCourseDetails, fetchCourseCategories} from '../../../../services/operations/courseDetailsAPI';
+import {editCourseDetails, fetchCourseCategories} from '../../../../services/operations/courseDetailsAPI';
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import ChipInput from './ChipInput';
 import RequirementField from './RequirementField';
 import IconBtn from '../../../common/IconBtn';
-import toast from 'react-hot-toast';
-import {setStep,setCourse} from '../../../../slices/courseSlice';
-import {COURSE_STATUS} from '../../../../utils/constatnts';
-import {toast} from 'react-hot-toast';
+
 const CourseInformationForm = () => {
     const {
         register,
@@ -23,7 +20,7 @@ const CourseInformationForm = () => {
         const {course,editCourse}=useSelector((state)=>state.course);
         const [loading,setLoading]=useState(false);
         const [courseCategories,setCourseCategories]=useState([]);
-        const {token}=useSelector((state)=>state.auth);
+        const [step,setStep]=useState(1);
 
         useEffect(()=>{
             const getCategories=async()=>{
@@ -68,8 +65,7 @@ const CourseInformationForm = () => {
         //handle Next button
         const onSubmit=async(data)=>{
             if(editCourse){
-               if(isFormUpdated){
-                const currentValues=getValue();
+               const currentValues=getValue();
                const formData=new FormData();
 
                formData.append("courseId",course._id)
@@ -101,37 +97,8 @@ const CourseInformationForm = () => {
                const result=await editCourseDetails(formData,token);
                if(result){
                 setStep(2);
-                dispatch(setCourse(result));
                }
-                 console.log("PRINTING FORMDATA.......",formData);
-                 console.log("PRINTING RESULT......",result);
-               }
-               else{
-              toast.error("No chnages made to the form");
             }
-            return;
-            }
-            
-            //create a new course
-            const formData=new FormData();
-            formData.append("courseName",data.courseTitle);
-            formData.append("courseDescription",data.courseShortDesc);
-            formData.append("price",data.coursePrice);
-            formData.append("tag",JSON.stringify(data.courseTags));
-            formData.append("whatWillYouLearn",data.courseBenefits);
-            formData.append("instructions",JSON.stringify(data.courseRequirements));
-            formData.append("thumbnail",data.courseImage);
-            formData.append("status",COURSE_STATUS.DRAFT);
-
-            setLoading(true);
-            const result=await addCourseDetails(formData,token);
-            if(result){
-              setStep(2);
-              dispatch(setCourse(result))
-            }
-            setLoading(false)
-            console.log("PRINTING FORMDATA.......",formData);
-            console.log("PRINTING RESULT......",result);
         }
 
   return (

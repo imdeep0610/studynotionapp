@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { FaCheck } from "react-icons/fa6";
 import CourseInformationForm from './CourseInformation/CourseInformationForm';
-import CourseBuilderForm from './CourseBuilder/CourseBuilderForm';
+import CourseBuilderForm from './CourseInformation/CourseBuilderForm';
 import PublishCourseForm from './CourseInformation/PublishCourseForm';
 
 const RenderSteps = () => {
