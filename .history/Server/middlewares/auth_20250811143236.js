@@ -9,7 +9,7 @@ exports.auth=async(req,res,next)=>{
     //extract token for authenticating user fron bearer web token
       const token=req.cookies.token || 
                   req.body.token || 
-                  req.header("Authorization").replace("Bearer" , "");
+                  req.header("Authorisation").replace("Bearer" , "");
 
     //if token is missing, return the response
      if(!token){

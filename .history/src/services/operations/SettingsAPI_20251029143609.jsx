@@ -39,7 +39,7 @@ export function updateProfile(token,formData){
      const toastId = toast.loading("Loading...")
      try{
        const response=await apiConnector("PUT",UPDATE_PROFILE_API,formData,{
-        Authorization:`Bearer ${token}`
+        Authorisation:`Bearer ${token}`
        })
        console.log("UPDATE_PROFILE_API RESPONSE..............",response);
         if (!response.data.success) {
@@ -68,7 +68,7 @@ export const changePassword=async(token,formData)=>{
     const toastId=toast.loading("Loading................");
     try{
        const response=await apiConnector("POST", CHANGE_PASSWORD_API,formData,{
-        Authorization : `Bearer ${token}`
+        Authorisation : `Bearer ${token}`
        })
        console.log("CHANGE_PASSWORD_API RESPONSE..............",response);
        if (!response.data.success) {
