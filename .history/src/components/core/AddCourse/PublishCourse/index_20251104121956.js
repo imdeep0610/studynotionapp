@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PublishCourseForm = () => {
+const PublishCourse = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const PublishCourseForm = () => {
   )
 }
 
-export default PublishCourseForm
+export default PublishCourse

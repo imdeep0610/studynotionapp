@@ -1,0 +1,67 @@
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { FaCheck } from "react-icons/fa6";
+import CourseInformationForm from './CourseInformation/CourseInformationForm';
+import CourseBuilderForm from './CourseBuilder/CourseBuilderForm';
+import PublishCourse from './PublishCourse';
+
+const RenderSteps = () => {
+
+   const {step}=useSelector((state)=>state.course);
+
+  const steps=[
+    {
+      id:1,
+      title:'Course Information'
+    },
+    {
+      id:2,
+      title:'Course Builder'
+    },
+    {
+      id:3,
+      title:'Publish'
+    }
+  ]
+
+  return (
+    <>
+       <div>
+           {
+            steps.map((item)=>(
+              <>
+              <div>
+                <div key={item.id} className={`${step===item.id ? 
+                  "bg-yellow-900 border-yellow-50 text-yellow-50" : 
+                  "bg-richblack-800 text-richblack-300 border-richblack-700"}`}>
+                       {
+                        step>item.id ? (<FaCheck />) : (item.id)
+                       }
+                </div>
+                </div>
+                {
+                  //Add dashes
+                }
+              </>
+            ))
+           }
+       </div>
+       <div>
+          {
+            steps.map((item)=>(
+              <>
+                <div key={item.id}>
+                   <p>{item.title}</p>
+                </div>
+              </>
+            ))
+          }
+       </div>
+       {steps===1 && (<CourseInformationForm/>)}
+       {steps===2 && (<CourseBuilderForm/>)} 
+       {steps===3 && (<PublishCourseForm/>)}
+    </>
+  )
+}
+
+export default RenderSteps
