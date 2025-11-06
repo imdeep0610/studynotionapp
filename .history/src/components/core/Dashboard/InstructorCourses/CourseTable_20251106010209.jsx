@@ -8,8 +8,8 @@ import { MdModeEdit } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
 import { MdDelete } from "react-icons/md";
 import ConfirmationModal from '../../../common/ConfirmationModal';
-import {deleteCourse, fetchInstructorCourses} from '../../../../services/operations/courseDetailsAPI';
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
+import {deleteCourse, fetchInstructorCourses} from '../../../../services/operations/courseDetailsAPI';
 
 const CourseTable = ({courses,setCourses}) => {
 
@@ -83,7 +83,7 @@ const CourseTable = ({courses,setCourses}) => {
                        <Td>
                           <button
                           disabled={true}
-                          onClick={navigate(`dashboard/edit-course/${course._id}`)}>
+                          onClick={navigate("")}>
                              <MdModeEdit 
                              className='mr-[19px]'/>
                           </button>

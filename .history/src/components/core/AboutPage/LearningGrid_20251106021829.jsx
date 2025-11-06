@@ -63,7 +63,7 @@ const LearningGrid = () => {
                         </h1>
                         <p className='text-richblack-200 mb-8'>{card.description}</p>
                         <Button active={true} linkto={card.BtnLink}
-                        className='p-5 '>
+                        className='p-5'>
                             {card.BtnText}
                         </Button>
                       </div>

@@ -83,7 +83,7 @@ const CourseTable = ({courses,setCourses}) => {
                        <Td>
                           <button
                           disabled={true}
-                          onClick={navigate(`dashboard/edit-course/${course._id}`)}>
+                          onClick={navigate("dashboard/edit-course")}>
                              <MdModeEdit 
                              className='mr-[19px]'/>
                           </button>

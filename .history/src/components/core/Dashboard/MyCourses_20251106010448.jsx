@@ -40,4 +40,4 @@ const MyCourses = () => {
   )
 }
 
-export default MyCourses;
+export default MyCourses
