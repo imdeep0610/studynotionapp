@@ -21,7 +21,6 @@ import { useSelector } from "react-redux";
 import AddCourse from "./components/core/AddCourse";
 import MyCourses from './components/core/Dashboard/MyCourses';
 import EditCourse from "./components/core/Dashboard/EditCourse";
-import Catalog from "./pages/Catalog";
 
 function App() {
 
