@@ -33,10 +33,8 @@ const Catalog = () => {
             console.error(error.message);
           }
         }
-         if(categoryId){
-            getCategoryDetails();
-         }
-    },[categoryId])
+         getCategoryDetails();
+    },[])
 
   return (
     <div>

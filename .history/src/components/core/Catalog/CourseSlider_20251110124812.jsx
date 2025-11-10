@@ -1,0 +1,19 @@
+import React from 'react'
+
+const CourseSlider = ({courses}) => {
+  return (
+    <>
+     {
+       courses?.length ? 
+       (
+        <div></div>
+       ) : 
+       (
+        <p>No Courses found</p>
+       )
+     }
+    </>
+  )
+}
+
+export default CourseSlider

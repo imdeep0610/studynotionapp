@@ -33,8 +33,8 @@ const Catalog = () => {
             console.error(error.message);
           }
         }
-         if(categoryId){
-            getCategoryDetails();
+         if(getCategoryDetails();){
+
          }
     },[categoryId])
 

@@ -5,7 +5,6 @@ import { apiConnector } from '../services/apiConnector';
 import { categories } from '../services/api';
 import { getCatalogPageData } from '../services/operations/pageAndComponentData';
 import CourseSlider from '../components/core/Catalog/CourseSlider';
-import CourseCard from '../components/core/Catalog/CourseCard';
 
 const Catalog = () => {
 
@@ -33,10 +32,8 @@ const Catalog = () => {
             console.error(error.message);
           }
         }
-         if(categoryId){
-            getCategoryDetails();
-         }
-    },[categoryId])
+         getCategoryDetails();
+    },[])
 
   return (
     <div>
