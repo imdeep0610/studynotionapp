@@ -7,7 +7,6 @@ import GetAvgRating from '../utils/avgRating';
 import "../App.css";
 import Error from '../pages/Error';
 import ConfirmationModal from '../components/common/ConfirmationModal';
-import RatingStars from '../components/common/RatingStars';
 
 const CourseDetails = () => {
 
@@ -38,13 +37,13 @@ const CourseDetails = () => {
     },[courseId]);
 
     useEffect(()=>{
-        const count=GetAvgRating(courseData?.data?.courseDetails.ratingAndReviews);
+        const count=GetAvgRating(courseData?.data?.CourseDetails.ratingAndReviews);
         setAvgReviewCount(count);
     },[courseData]);
 
     useEffect(()=>{
         let lectures=0;
-        courseData?.data?.courseDetails?.courseContent?.forEach((sec)=>{
+        courseData?.data?.CourseDetails?.courseContent?.forEach((sec)=>{
             lectures+=sec.subSection.length || 0
         })
 
@@ -94,18 +93,13 @@ const CourseDetails = () => {
         ratingAndReviews,
         createdAt,
         studentsEnrolled
-    }=courseData.data?.courseDetails
+    }=courseData.data?.CourseDetails
 
   return (
-    <div className='flex flex-col items-center text-richblack-5'>
+    <div className='flex flex-col items-center'>
         <p>{courseName}</p>
-        <p>{courseDescription}</p>
-        <div className='flex gap-x-3'>
-            <span>{avgReviewCount}</span>
-            <RatingStars Review_Count={avgReviewCount} Star_Size={24}/>
-            <span>{`${ratingAndReviews.length} reviews`}</span>
-            <span>{`${studentsEnrolled.length} students enrolled`}</span>
-        </div>  
+         <p>{courseDescription}</p>
+          <p>{ratingAndReviews}</p>
        {
         confirmationalModal && <ConfirmationModal modalData={confirmationalModal}/>
        }

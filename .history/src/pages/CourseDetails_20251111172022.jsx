@@ -97,10 +97,10 @@ const CourseDetails = () => {
     }=courseData.data?.courseDetails
 
   return (
-    <div className='flex flex-col items-center text-richblack-5'>
+    <div className='flex flex-col items-center'>
         <p>{courseName}</p>
         <p>{courseDescription}</p>
-        <div className='flex gap-x-3'>
+        <div>
             <span>{avgReviewCount}</span>
             <RatingStars Review_Count={avgReviewCount} Star_Size={24}/>
             <span>{`${ratingAndReviews.length} reviews`}</span>
