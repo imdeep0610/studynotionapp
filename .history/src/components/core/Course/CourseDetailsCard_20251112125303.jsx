@@ -1,0 +1,24 @@
+import React from 'react'
+
+function CourseDetailsCard({course,setConfirmationalModal,handleBuyCourse}){
+    const {
+        thumbnail:ThumbnailImage,
+        price:CurrentPrice,
+    }=course;
+   return(
+     <div>
+        <img 
+        src={ThumbnailImage}
+        alt="Thumbnail"
+        className='max-h-[300px] min-h-[180px] w-[400px] rounded-xl'/>
+        <div>
+            Rs. {CurrentPrice}
+        </div>
+        <div>
+            <button>
+                
+            </button>
+        </div>
+     </div>
+   )
+}
