@@ -119,10 +119,7 @@ const VideoDetailsSidebar = ({setReviewModal}) => {
                                                     "bg-yellow-200 text-richblack-900" :
                                                     "bg-richblack-900 text-richblack-5"
                                                 }`}
-                                                onClick={()=>navigate(
-                                                    `/view-course/${courseEntireData?._id}/section
-                                                    /${section?._id}/sub-section/${topic._id}`
-                                                )}>
+                                                onClick={()=>navigate("")}>
                                                     <input
                                                     type='checkbox'
                                                     checked={completedLectures.includes(topic._id)}

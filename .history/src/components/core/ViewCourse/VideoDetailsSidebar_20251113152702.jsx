@@ -112,23 +112,8 @@ const VideoDetailsSidebar = ({setReviewModal}) => {
                                 activeStatus===section?._id && (
                                     <div>
                                         {
-                                            section.subSection.map((topic,index)=>{
-                                                <div key={index}
-                                                className={`flex gap-3 p-3 
-                                                ${videoBarActive===topic._id ?
-                                                    "bg-yellow-200 text-richblack-900" :
-                                                    "bg-richblack-900 text-richblack-5"
-                                                }`}
-                                                onClick={()=>navigate(
-                                                    `/view-course/${courseEntireData?._id}/section
-                                                    /${section?._id}/sub-section/${topic._id}`
-                                                )}>
-                                                    <input
-                                                    type='checkbox'
-                                                    checked={completedLectures.includes(topic._id)}
-                                                    onChange={()=>{}}/>
-                                                    <span>{topic.title}</span>
-                                                </div>
+                                            section.subSection.map((subSection,index)=>{
+
                                             })
                                         }
                                     </div>

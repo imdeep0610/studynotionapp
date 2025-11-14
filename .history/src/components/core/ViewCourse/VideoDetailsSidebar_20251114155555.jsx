@@ -121,7 +121,7 @@ const VideoDetailsSidebar = ({setReviewModal}) => {
                                                 }`}
                                                 onClick={()=>navigate(
                                                     `/view-course/${courseEntireData?._id}/section
-                                                    /${section?._id}/sub-section/${topic._id}`
+                                                    /${section?._id}`
                                                 )}>
                                                     <input
                                                     type='checkbox'

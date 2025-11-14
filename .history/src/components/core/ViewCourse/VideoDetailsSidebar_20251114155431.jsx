@@ -120,8 +120,7 @@ const VideoDetailsSidebar = ({setReviewModal}) => {
                                                     "bg-richblack-900 text-richblack-5"
                                                 }`}
                                                 onClick={()=>navigate(
-                                                    `/view-course/${courseEntireData?._id}/section
-                                                    /${section?._id}/sub-section/${topic._id}`
+                                                    `/view-course/${courseEntireData?._id}`
                                                 )}>
                                                     <input
                                                     type='checkbox'

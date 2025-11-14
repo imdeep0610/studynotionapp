@@ -95,45 +95,15 @@ const VideoDetailsSidebar = ({setReviewModal}) => {
             {/*For section and sub-section*/}
             <div>
                 {
-                    courseSectionData.map((section,index)=>(
-                      <div key={index} onClick={()=>setActiveStatus(section._id)}>
+                    courseSectionData.map((course,index)=>(
+                      <div key={index} onClick={()=>setActiveStatus(course._id)}>
                          {/*Section part*/}
                          <div>
                             <div className='flex justify-around'>
-                                {section?.sectionName}
+                                {course?.sectionName}
                                 <MdKeyboardArrowUp />
                             </div>
-                            {/*Handle rotate logic of 180 degree*/}
-                         </div>
-
-                         {/*Sub-section part*/}
-                         <div>
-                            {
-                                activeStatus===section?._id && (
-                                    <div>
-                                        {
-                                            section.subSection.map((topic,index)=>{
-                                                <div key={index}
-                                                className={`flex gap-3 p-3 
-                                                ${videoBarActive===topic._id ?
-                                                    "bg-yellow-200 text-richblack-900" :
-                                                    "bg-richblack-900 text-richblack-5"
-                                                }`}
-                                                onClick={()=>navigate(
-                                                    `/view-course/${courseEntireData?._id}/section
-                                                    /${section?._id}/sub-section/${topic._id}`
-                                                )}>
-                                                    <input
-                                                    type='checkbox'
-                                                    checked={completedLectures.includes(topic._id)}
-                                                    onChange={()=>{}}/>
-                                                    <span>{topic.title}</span>
-                                                </div>
-                                            })
-                                        }
-                                    </div>
-                                )
-                            }
+                            {/*Handle rotate logic of 180 degree}
                          </div>
                       </div>
                     ))
