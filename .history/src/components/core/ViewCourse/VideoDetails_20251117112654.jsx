@@ -1,0 +1,44 @@
+import React, { useRef, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate, useParams } from 'react-router-dom';
+
+const VideoDetails = () => {
+
+  const playerRef=useRef();
+  const navigate=useNavigate();
+  const dispatch=useDispatch();
+  const {courseId,sectionId,subSectionId}=useParams();
+  const {token}=useSelector((state)=>state.auth);
+  const {courseSectionData,courseEntireData,completedLectures}=useSelector((state)=>state.viewCourse);
+
+  const [videoData,setVideoData]=useState([]);
+  const [videoEnded,setVideoEnded]=useState();
+
+  const isFirstVideo=()=>{
+
+  }
+
+  const isLastVideo=()=>{
+
+  }
+
+  const goToNextVideo=()=>{
+
+  }
+
+  const goToPrevVideo=()=>{
+
+  }
+
+  const handleLectureCompletion=()=>{
+
+  }
+
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default VideoDetails
