@@ -42,7 +42,7 @@ const {
 
 const {
   updateCourseProgress
-}=require("../controllers/courseProgress");
+}=require("../controllers/courseProgress")
 
 // Importing Middlewares
 const { auth, isInstructor, isStudent, isAdmin } = require("../middlewares/auth")
@@ -69,8 +69,6 @@ router.post("/addSubSection", auth, isInstructor, createSubSection)
 router.get("/getAllCourses", getAllCourses)
 // Get Details for a Specific Courses
 router.post("/getCourseDetails", getCourseDetails)
-//Get the course progress
-router.post("/updateCourseProgress",auth,isStudent,updateCourseProgress)
 
 // ********************************************************************************************************
 //                                      Category routes (Only by Admin)

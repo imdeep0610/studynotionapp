@@ -45,7 +45,7 @@ const VideoDetails = () => {
      }
    }
    setVideoSpecificDetails();
-  },[courseSectionData,courseEntireData,location.pathname]);
+  },[courseSectionData,courseEntireData,location.pathname])
 
   const isFirstVideo=()=>{
      const currentSectionIndex=courseSectionData.findIndex((data)=>data._id===sectionId);
@@ -159,13 +159,13 @@ const VideoDetails = () => {
                           !completedLectures.includes(subSectionId) && (
                             <IconBtn
                             disabled={loading}
-                            onclick={()=>handleLectureCompletion()}
+                            onClick={()=>handleLectureCompletion()}
                             text={!loading ? "Mark As Completed" : "Loading......"}/>
                           )
                         }
                         <IconBtn
                         disabled={loading}
-                        onclick={()=>{
+                        onClick={()=>{
                           if(playerRef?.current){
                               playerRef?.current.seek(0);
                               setVideoEnded(false);

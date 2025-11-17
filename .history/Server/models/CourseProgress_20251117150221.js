@@ -10,8 +10,7 @@ const courseProgressSchema=new mongoose.Schema({
     ref:'SubSection'
    }],
    userId:{
-      type:mongoose.Schema.Types.ObjectId,
-      ref:"SubSection",
+      type:mongoose.Schema.Types.ObjectId
    }
 })
 module.export=mongoose.model("CourseProgress",courseProgressSchema)

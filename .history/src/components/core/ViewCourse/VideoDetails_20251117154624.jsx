@@ -165,7 +165,7 @@ const VideoDetails = () => {
                         }
                         <IconBtn
                         disabled={loading}
-                        onclick={()=>{
+                        onClick={()=>{
                           if(playerRef?.current){
                               playerRef?.current.seek(0);
                               setVideoEnded(false);

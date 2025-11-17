@@ -70,7 +70,7 @@ router.get("/getAllCourses", getAllCourses)
 // Get Details for a Specific Courses
 router.post("/getCourseDetails", getCourseDetails)
 //Get the course progress
-router.post("/updateCourseProgress",auth,isStudent,updateCourseProgress)
+router.post("",updateCourseProgress)
 
 // ********************************************************************************************************
 //                                      Category routes (Only by Admin)

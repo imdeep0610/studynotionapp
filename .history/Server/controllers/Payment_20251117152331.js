@@ -5,7 +5,6 @@ const mailSender=require('../utils/mailSender');
 const {courseEnrollmentEmail}=require('../mail/templates/courseEnrollmentEmail');
 const { default: mongoose } = require('mongoose');
 const crypto=require("bcryptjs");
-const CourseProgress=require("../models/CourseProgress");
 
 
 
@@ -131,16 +130,11 @@ const enrollStudents=async(courses,userId,res)=>{
       })
    }
 
-   const courseProgress=await CourseProgress.create({
-    courseId:courseId,
-    userId:userId,
-    completedVideos:[]
-   })
+   const courseProgress=await 
 
    //find the student and add the the course to their list of enrolledCourse
    const enrolledStudent=await User.findByIdAndUpdate(userId,
     {$push:{
-        courseProgress:courseProgress._id,
         courses:courseId
     }},{new:true})
 

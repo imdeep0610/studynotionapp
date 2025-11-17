@@ -140,7 +140,6 @@ const enrollStudents=async(courses,userId,res)=>{
    //find the student and add the the course to their list of enrolledCourse
    const enrolledStudent=await User.findByIdAndUpdate(userId,
     {$push:{
-        courseProgress:courseProgress._id,
         courses:courseId
     }},{new:true})
 
